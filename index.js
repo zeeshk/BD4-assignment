@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
   res.sendFile(resolve(__dirname, 'pages/index.html'));
 });
 
-//Exercise 1: Get All Restaurants
+// Exercise 1: Get All Restaurants
 // http://localhost:3000/restaurants
 async function getAllRestaurants() {
   let query = 'SELECT * FROM restaurants';
@@ -83,7 +83,7 @@ app.get('/restaurants/filter', async (req, res) => {
   return res.status(200).json(result);
 });
 
-//Exercise 5: Get Restaurants Sorted by Rating
+// Exercise 5: Get Restaurants Sorted by Rating
 // http://localhost:3000/restaurants/sort-by-rating
 function sortByRating(a, b) {
   return a.rating - b.rating;
